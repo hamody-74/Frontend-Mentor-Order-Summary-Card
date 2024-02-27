@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-bg-color: hsl(225, 100%, 94%);
+  --secondary-color: hsl(245, 75%, 52%);
+  --card-color: hsl(225, 100%, 98%);
+  --text-color: hsl(224, 23%, 55%);
+  --main-color: hsl(223, 47%, 23%);
+}
+
+body {
+  background-color: var(--main-bg-color);
+  font-family: "Red Hat Display", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100svh;
+  font-size: 16px;
+  padding: 0 15px;
+}
+
+body > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  z-index: -1;
+}
+
+.card {
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--card-color);
+}
+
+.card > img {
+  max-width: 100%;
+  width: 400px;
+}
+
+.content {
+  padding: 0 40px;
+}
+
+.content > h1 {
+  margin: 30px auto 0;
+  font-weight: 900;
+  color: var(--main-color);
+}
+
+.content > p {
+  max-width: 320px;
+  font-weight: 500;
+  line-height: 1.7;
+  word-spacing: 4px;
+  margin: 20px auto;
+  color: var(--text-color);
+}
+
+.content .get-music {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.content .get-music .info {
+  display: flex;
+}
+
+.content .get-music .info .music {
+  margin-left: 20px;
+}
+
+.content .get-music .info .music > h4 {
+  margin-bottom: 5px;
+  color: var(--main-color);
+  font-weight: 700;
+  font-size: 17px;
+  text-align: left;
+}
+
+.content .music > span {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.content .get-music > a {
+  color: var(--secondary-color);
+  font-weight: 900;
+}
+
+.content > a {
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--secondary-color);
+}
+
+.content > a.buy {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  color: white;
+  background-color: var(--secondary-color);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 767px) {
+  .card {
+    width: 340px;
+  }
+}
+
+@media (max-width: 330px) {
+  .card {
+    width: 250px;
+  }
+
+  .content > h1 {
+    font-size: x-large;
+  }
+
+  .content > p {
+    word-spacing: 2px;
+    font-size: 12px;
+  }
+  .content .get-music .info .music > h4 {
+    font-size: 15px;
+  }
+
+  .content .get-music .info .music {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
